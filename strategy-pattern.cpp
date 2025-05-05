@@ -74,21 +74,21 @@ int main() {
         NoDiscount* noDiscount = new NoDiscount();
         Cart cart(noDiscount);
         cout<<"No discount applied." << endl;
-        cout << "Final price"<< price << endl;
+        cout << "Final price"<< price << "Pesos" << endl;
     } else if(discountType == 2){
         TenPercentDiscount* tenPercentDiscount = new TenPercentDiscount();
         Cart cart(tenPercentDiscount);
-        cout << "Original price: " << price << endl;
+        cout << "Original price: " << price << "Pesos" << endl;
         cout << "Discount applied: 10%" << endl;
-        cout << "Amount saved: " << price - cart.calculatePrice(price) << endl;
-        cout << "Final price after discount: " << cart.calculatePrice(price) << endl;
+        cout << "Amount saved: " << price - cart.calculatePrice(price) << "Pesos" << endl;
+        cout << "Final price after discount: " << cart.calculatePrice(price) << "Pesos" << endl;
     } else if(discountType == 3){
         TwentyPercentDiscount* twentyPercentDiscount = new TwentyPercentDiscount();
         Cart cart(twentyPercentDiscount);
-        cout << "Original price: " << price << endl;
+        cout << "Original price: " << price << "Pesos"<< endl;
         cout << "Discount applied: 20%" << endl;
-        cout << "Amount saved: " << price - cart.calculatePrice(price) << endl;
-        cout << "Final price after discount: " << cart.calculatePrice(price) << endl;
+        cout << "Amount saved: " << price - cart.calculatePrice(price) << "Pesos" << endl;
+        cout << "Final price after discount: " << cart.calculatePrice(price) << "Pesos" << endl;
     } else {
         cout << "Invalid discount type selected." << endl;
     }
